@@ -1,0 +1,45 @@
+$backgroundColor: #fff;
+
+$textColorDark: rgb(74, 74, 74);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: $textColorDark;
+  background-color: $backgroundColor;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+a {
+  color: $textColorDark;
+  text-decoration: none;
+}
+
+.navbar {
+  margin-bottom: 25px;
+}
+
+.container {
+  padding: 0 15px;
+}
+
+/* tablet */
+@media (min-width: 481px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+
+@media (min-width: 1087px) {
+}
+
+@import "./App";

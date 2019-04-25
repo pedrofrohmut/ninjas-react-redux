@@ -6,7 +6,7 @@ const Ninja = ({ ninja, onDeleteNinja }) => (
     <strong>Name:</strong> {ninja.name} {" - "}
     <strong>Age:</strong> {ninja.age} {" - "}
     <strong>Belt:</strong> {ninja.belt} {" "}
-    <button className="button is-danger is-inverted" onClick={() => onDeleteNinja(ninja.id)}>Delete</button>
+    <a style={{ cursor: "pointer" }} className="text-danger ml-3" onClick={() => onDeleteNinja(ninja.id)}>Delete</a>
   </>
 )
 

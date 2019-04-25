@@ -35,13 +35,11 @@ class App extends Component {
       <div className="App">
         <Navbar />
 
-        <section className="section">
-          <div className="container">
-            <AddNinja onAddNinja={this.handleAddNinja} />
-            <hr/>
-            <Ninjas ninjas={this.state.ninjas} onDeleteNinja={this.handleDeleteNinja} />
-          </div>
-        </section>
+        <div className="container my-5">
+          <AddNinja onAddNinja={this.handleAddNinja} />
+          <hr/>
+          <Ninjas ninjas={this.state.ninjas} onDeleteNinja={this.handleDeleteNinja} />
+        </div>
       </div>
     )
   }

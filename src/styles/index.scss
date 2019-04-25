@@ -1,6 +1,6 @@
-$backgroundColor: #fff;
+$backgroundColor: #343a40;
 
-$textColorDark: rgb(74, 74, 74);
+$textColorDark: #f3f3f3;
 
 * {
   box-sizing: border-box;
@@ -38,4 +38,4 @@ a {
 @media (min-width: 1087px) {
 }
 
-@import "./App";
+@import "./Components";

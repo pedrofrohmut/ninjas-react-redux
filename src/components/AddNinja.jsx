@@ -14,38 +14,24 @@ class AddNinja extends Component {
 
   render() {
     return (
-      <div className="add-ninja-wrapper columns">
-        <div className="column is-6 is-offset-3">        
-          <h1 className="title is-3">Add Ninjas</h1>
-          <form onSubmit={this.handleSubmit}> 
-            <div className="field">
-              <label htmlFor="name" className="label">Name</label>
-              <div className="control">
-                <input type="text" name="name" className="input" onChange={this.handleChange} placeholder="Name" autoFocus/>
-              </div>
+      <div className="add-ninja-wrapper row">
+        <div className="col-md-6 mx-auto">
+          <h1>Add Ninjas</h1>
+          <form onSubmit={this.handleSubmit}>
+            <div className="form-group">
+              <label>Name</label>
+              <input type="text" name="name" className="form-control" onChange={this.handleChange} placeholder="Name"/>
             </div>
-
-            <div className="field">
-              <label htmlFor="age" className="label">Age</label>
-              <div className="control">
-                <input type="number" name="age" className="input" onChange={this.handleChange} placeholder="Age"/>
-              </div>
+            <div className="form-group">
+              <label>Age</label>
+              <input type="number" name="age" className="form-control" onChange={this.handleChange} placeholder="Age"/>
             </div>
-
-            <div className="field">
-              <label htmlFor="belt" className="label">Belt</label>
-              <div className="control">
-                <input type="text" name="belt" className="input" onChange={this.handleChange} placeholder="Belt Color"/>
-              </div>
+            <div className="form-group">
+              <label>Belt</label>
+              <input type="text" name="belt" className="form-control" onChange={this.handleChange} placeholder="Belt"/>
             </div>
-
-            <div className="field is-grouped">
-              <div className="control">
-                <button className="button is-link">Submit</button>
-              </div>
-              <div className="control">
-                <button className="button is-text">Cancel</button>
-              </div>
+            <div className="form-group">
+              <button type="submit" className="btn btn-primary">Submit</button>
             </div>
           </form>
         </div>

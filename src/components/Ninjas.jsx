@@ -10,11 +10,11 @@ const Ninjas = props => {
   )
 
   const allNinjas = (
-    <ul className="list">
+    <ul className="list-group">
       { 
         ninjas
           .map((ninja, i) => (
-            <li key={i} className="list-item"> 
+            <li key={i} className="list-group-item list-group-item-dark"> 
               {getNinja(ninja)}
             </li>
           )) 
@@ -23,12 +23,12 @@ const Ninjas = props => {
   )
 
   const olderNinjas = (
-    <ul className="list">
+    <ul className="list-group">
       { 
         ninjas
           .filter(ninja => ninja.age > 25)
           .map((ninja, i) => (
-            <li key={i} className="list-item">
+            <li key={i} className="list-group-item list-group-item-dark">
               {getNinja(ninja)}
             </li>
           ))
@@ -37,12 +37,12 @@ const Ninjas = props => {
   )
 
   const youngerNinjas = (
-    <ul className="list">
+    <ul className="list-group">
       {
         ninjas
           .filter(ninja => ninja.age <= 25)
           .map((ninja, i) => (
-            <li key={i} className="list-item">
+            <li key={i} className="list-group-item list-group-item-dark">
               {getNinja(ninja)}
             </li>    
           ))
@@ -52,22 +52,22 @@ const Ninjas = props => {
 
   return (
     <div className="ninjas-component">
-      <h1 className="title is-1">Ninjas</h1>
+      <h1>Ninjas</h1>
       <br/>
 
       {ninjas.length > 0 ? (
         <>
-          <h2 className="subtitle is-3">All Ninjas</h2>
+          <h2>All Ninjas</h2>
           {allNinjas}
         </>
       ) : (
-        <h2 className="subtitle is-3">There are no Ninjas to display</h2>
+        <h2>There are no Ninjas to display</h2>
       )}
       <br/>
       
       {ninjas.some(ninja => ninja.age > 25) && (
         <>
-          <h2 className="subtitle is-3">Older Ninjas</h2>
+          <h2>Older Ninjas</h2>
           {olderNinjas}
         </>
       )}
@@ -75,7 +75,7 @@ const Ninjas = props => {
 
       {ninjas.some(ninja => ninja.age <= 25) && (
         <>
-          <h2 className="subtitle is-3">Younger Ninjas</h2>
+          <h2>Younger Ninjas</h2>
           {youngerNinjas}
         </>
       )}

@@ -2,6 +2,7 @@ import React from "react"
 import Ninja from "./Ninja"
 
 const Ninjas = props => {
+  
   const { ninjas } = props
 
   const ninjasList = (

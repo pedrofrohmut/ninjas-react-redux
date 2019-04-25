@@ -1,8 +1,9 @@
 import React, { Component } from "react"
 import Ninjas from "./components/Ninjas"
 import Navbar from "./components/Navbar"
+import AddNinja from "./components/AddNinja"
 
-class App extends Component  {
+class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -13,18 +14,27 @@ class App extends Component  {
         { id: 4, name: "Crystal", age: 20, belt: "Pink" }
       ]
     }
+    this.handleAddNinja = this.handleAddNinja.bind(this)
+  }
+
+  handleAddNinja(newNinja) {
+    this.setState({
+      ninjas: [...this.state.ninjas, newNinja]
+    })
   }
 
   render() {
     return (
-      <div classNameName="App">
+      <div className="App">
         <Navbar />
 
-        <section classNameName="section">
+        <section className="section">
           <div className="container">
-              <Ninjas ninjas={this.state.ninjas} />
+            <AddNinja onAddNinja={this.handleAddNinja} />
+            <hr/>
+            <Ninjas ninjas={this.state.ninjas} />
           </div>
-        </section>  
+        </section>
       </div>
     )
   }

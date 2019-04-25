@@ -14,39 +14,42 @@ class AddNinja extends Component {
 
   render() {
     return (
-      <>
-        <form onSubmit={this.handleSubmit}> 
-          <div className="field">
-            <label htmlFor="name" className="label">Name</label>
-            <div className="control">
-              <input type="text" name="name" className="input" onChange={this.handleChange} placeholder="Name" autoFocus/>
+      <div className="add-ninja-wrapper columns">
+        <div className="column is-6 is-offset-3">        
+          <h1 className="title is-3">Add Ninjas</h1>
+          <form onSubmit={this.handleSubmit}> 
+            <div className="field">
+              <label htmlFor="name" className="label">Name</label>
+              <div className="control">
+                <input type="text" name="name" className="input" onChange={this.handleChange} placeholder="Name" autoFocus/>
+              </div>
             </div>
-          </div>
 
-          <div className="field">
-            <label htmlFor="age" className="label">Age</label>
-            <div className="control">
-              <input type="number" name="age" className="input" onChange={this.handleChange} placeholder="Age"/>
+            <div className="field">
+              <label htmlFor="age" className="label">Age</label>
+              <div className="control">
+                <input type="number" name="age" className="input" onChange={this.handleChange} placeholder="Age"/>
+              </div>
             </div>
-          </div>
 
-          <div className="field">
-            <label htmlFor="belt" className="label">Belt</label>
-            <div className="control">
-              <input type="text" name="belt" className="input" onChange={this.handleChange} placeholder="Belt Color"/>
+            <div className="field">
+              <label htmlFor="belt" className="label">Belt</label>
+              <div className="control">
+                <input type="text" name="belt" className="input" onChange={this.handleChange} placeholder="Belt Color"/>
+              </div>
             </div>
-          </div>
 
-          <div className="field is-grouped">
-            <div className="control">
-              <button className="button is-link">Submit</button>
+            <div className="field is-grouped">
+              <div className="control">
+                <button className="button is-link">Submit</button>
+              </div>
+              <div className="control">
+                <button className="button is-text">Cancel</button>
+              </div>
             </div>
-            <div className="control">
-              <button className="button is-text">Cancel</button>
-            </div>
-          </div>
-        </form>
-      </>
+          </form>
+        </div>
+      </div>
     )
   } // render
 

@@ -15,11 +15,18 @@ class App extends Component {
       ]
     }
     this.handleAddNinja = this.handleAddNinja.bind(this)
+    this.handleDeleteNinja = this.handleDeleteNinja.bind(this)
   }
 
   handleAddNinja(newNinja) {
     this.setState({
       ninjas: [...this.state.ninjas, newNinja]
+    })
+  }
+
+  handleDeleteNinja(id) {
+    this.setState({
+      ninjas: this.state.ninjas.filter(n => n.id !== id)
     })
   }
 
@@ -32,7 +39,7 @@ class App extends Component {
           <div className="container">
             <AddNinja onAddNinja={this.handleAddNinja} />
             <hr/>
-            <Ninjas ninjas={this.state.ninjas} />
+            <Ninjas ninjas={this.state.ninjas} onDeleteNinja={this.handleDeleteNinja} />
           </div>
         </section>
       </div>
